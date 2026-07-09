@@ -1,0 +1,13 @@
+{
+  "status": "throttled",
+  "verdict": null,
+  "message": "Semantic Scholar throttled every search (HTTP 429). No neighbors fetched — rerun later. Nothing fabricated.",
+  "nearest_neighbors": [],
+  "queries_run": [
+    "title per-item weak-label signal task-format cueing"
+  ],
+  "idea": "Title: Per-item Weak-Label Signal vs Task-Format Cueing in Weak-to-Strong Generalization\nQuestion: In weak-to-strong generalization, does the strong student need per-item weak-label signal, or is task-format cueing enough?",
+  "model": "claude-sonnet-5",
+  "effort": "high",
+  "generated_at": "2026-07-09T11:38:15+00:00"
+}

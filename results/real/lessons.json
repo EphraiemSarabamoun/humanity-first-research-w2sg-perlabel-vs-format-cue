@@ -1,0 +1,24 @@
+{
+  "field_subarea": "weak-to-strong generalization / scalable oversight",
+  "techniques_used": [
+    "LoRA finetuning of a 7B student",
+    "label-channel ablation (shuffle/random/constant) with matched training set",
+    "PGR + raw-accuracy reporting",
+    "paired-across-seeds bootstrap"
+  ],
+  "what_worked": [
+    "the raw-accuracy contrast is far more legible than PGR here because the weak-strong band is narrow (0.915->0.962), making PGR noisy — report accuracy as the primary axis",
+    "matched-input label-channel ablations cleanly isolate per-item signal from format"
+  ],
+  "what_failed": [
+    "a strong (0.915) weak labeler leaves too little weak->strong headroom, making PGR CIs huge; pick a weaker supervisor next time for a wider band"
+  ],
+  "gotchas": [
+    "analyze.py must be re-run after the FULL seed sweep lands — the smoke-run artifacts silently persisted here",
+    "Semantic Scholar 429'd on both the original and the re-run novelty gate; references.bib had to be hand-built (12 verified entries), so the S2 auto-neighbor path cannot be relied on for the write stage"
+  ],
+  "reusable_pointers": [
+    "label-channel ablation design generalizes to any W2SG task"
+  ],
+  "novel_vs_kb": "The KB's W2SG playbook (scalable-oversight sub-questions 1-2) covers PGR curves and the Burns auxiliary-confidence loss but never a matched format-preserving signal-destruction control; the label-channel ablation isolating per-item weak-label signal from task-format cueing is new, and it yields a clean negative for 'format is enough' that inverts Min et al. 2022's ICL random-label result in the finetuning regime."
+}

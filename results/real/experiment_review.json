@@ -1,0 +1,18 @@
+{
+  "generated_at": "2026-07-09T11:42:33+00:00",
+  "memo_path": "/home/ephra/projects/Claudius_Maximus/projects/w2sg-perlabel-vs-format-cue/drafts/results_memo.md",
+  "engine": "sakana",
+  "judge": "claude-sonnet-5/high",
+  "gpu_h_threshold": 2.0,
+  "overall_score": null,
+  "status": "judge_outage",
+  "weaknesses": [],
+  "worklist": {
+    "auto_run": [],
+    "followups": [],
+    "concede": []
+  },
+  "review_passes_ok": 0,
+  "review_passes_total": 5,
+  "note": "the sakana reviewer produced no usable review (judge outage); worklist empty, advisory tool blocks nothing — rerun to get a worklist"
+}

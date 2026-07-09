@@ -1,0 +1,325 @@
+{
+  "slug": "w2sg-perlabel-vs-format-cue",
+  "title": "Per-item Weak-Label Signal vs Task-Format Cueing in Weak-to-Strong Generalization",
+  "tier": 1,
+  "metrics": {
+    "reference_accuracy": null,
+    "gpu_time_match": null
+  },
+  "reference_detail": [
+    {
+      "key": "burns2023weak",
+      "resolves": null,
+      "title_match": null,
+      "characterization_ok": null,
+      "why": "no eprint id — not verifiable by the arxiv instrument"
+    },
+    {
+      "key": "min2022rethinking",
+      "resolves": null,
+      "title_match": null,
+      "characterization_ok": null,
+      "why": "no eprint id — not verifiable by the arxiv instrument"
+    },
+    {
+      "key": "christiano2018supervising",
+      "resolves": null,
+      "title_match": null,
+      "characterization_ok": null,
+      "why": "no eprint id — not verifiable by the arxiv instrument"
+    },
+    {
+      "key": "hu2022lora",
+      "resolves": null,
+      "title_match": null,
+      "characterization_ok": null,
+      "why": "no eprint id — not verifiable by the arxiv instrument"
+    },
+    {
+      "key": "socher2013recursive",
+      "resolves": null,
+      "title_match": null,
+      "characterization_ok": null,
+      "why": "no eprint id — not verifiable by the arxiv instrument"
+    },
+    {
+      "key": "wang2018glue",
+      "resolves": null,
+      "title_match": null,
+      "characterization_ok": null,
+      "why": "no eprint id — not verifiable by the arxiv instrument"
+    },
+    {
+      "key": "yang2024qwen25",
+      "resolves": null,
+      "title_match": null,
+      "characterization_ok": null,
+      "why": "no eprint id — not verifiable by the arxiv instrument"
+    },
+    {
+      "key": "irving2018debate",
+      "resolves": null,
+      "title_match": null,
+      "characterization_ok": null,
+      "why": "no eprint id — not verifiable by the arxiv instrument"
+    },
+    {
+      "key": "bowman2022measuring",
+      "resolves": null,
+      "title_match": null,
+      "characterization_ok": null,
+      "why": "no eprint id — not verifiable by the arxiv instrument"
+    },
+    {
+      "key": "zhang2017rethinking",
+      "resolves": null,
+      "title_match": null,
+      "characterization_ok": null,
+      "why": "no eprint id — not verifiable by the arxiv instrument"
+    },
+    {
+      "key": "northcutt2021confident",
+      "resolves": null,
+      "title_match": null,
+      "characterization_ok": null,
+      "why": "no eprint id — not verifiable by the arxiv instrument"
+    },
+    {
+      "key": "hinton2015distilling",
+      "resolves": null,
+      "title_match": null,
+      "characterization_ok": null,
+      "why": "no eprint id — not verifiable by the arxiv instrument"
+    }
+  ],
+  "gpu_detail": [
+    {
+      "id": "weak-labeler",
+      "plain_explanation": "",
+      "expected_gpu_hours_low": null,
+      "expected_gpu_hours_high": null,
+      "recorded_gpu_hours": 0.015417289984171577,
+      "verdict": "undecided"
+    },
+    {
+      "id": "base-fewshot-seed-1",
+      "plain_explanation": "",
+      "expected_gpu_hours_low": null,
+      "expected_gpu_hours_high": null,
+      "recorded_gpu_hours": 0.0025985409877790112,
+      "verdict": "undecided"
+    },
+    {
+      "id": "constant-majority-seed0",
+      "plain_explanation": "",
+      "expected_gpu_hours_low": null,
+      "expected_gpu_hours_high": null,
+      "recorded_gpu_hours": 0.024002272657218986,
+      "verdict": "undecided"
+    },
+    {
+      "id": "constant-majority-seed1",
+      "plain_explanation": "",
+      "expected_gpu_hours_low": null,
+      "expected_gpu_hours_high": null,
+      "recorded_gpu_hours": 0.024029532559159433,
+      "verdict": "undecided"
+    },
+    {
+      "id": "constant-majority-seed2",
+      "plain_explanation": "",
+      "expected_gpu_hours_low": null,
+      "expected_gpu_hours_high": null,
+      "recorded_gpu_hours": 0.024059835291110276,
+      "verdict": "undecided"
+    },
+    {
+      "id": "constant-majority-seed3",
+      "plain_explanation": "",
+      "expected_gpu_hours_low": null,
+      "expected_gpu_hours_high": null,
+      "recorded_gpu_hours": 0.024108856740276678,
+      "verdict": "undecided"
+    },
+    {
+      "id": "constant-majority-seed4",
+      "plain_explanation": "",
+      "expected_gpu_hours_low": null,
+      "expected_gpu_hours_high": null,
+      "recorded_gpu_hours": 0.02410427608833642,
+      "verdict": "undecided"
+    },
+    {
+      "id": "gold-ceiling-seed0",
+      "plain_explanation": "",
+      "expected_gpu_hours_low": null,
+      "expected_gpu_hours_high": null,
+      "recorded_gpu_hours": 0.023672213517501303,
+      "verdict": "undecided"
+    },
+    {
+      "id": "gold-ceiling-seed1",
+      "plain_explanation": "",
+      "expected_gpu_hours_low": null,
+      "expected_gpu_hours_high": null,
+      "recorded_gpu_hours": 0.023951932296388097,
+      "verdict": "undecided"
+    },
+    {
+      "id": "gold-ceiling-seed2",
+      "plain_explanation": "",
+      "expected_gpu_hours_low": null,
+      "expected_gpu_hours_high": null,
+      "recorded_gpu_hours": 0.02405828059971908,
+      "verdict": "undecided"
+    },
+    {
+      "id": "gold-ceiling-seed3",
+      "plain_explanation": "",
+      "expected_gpu_hours_low": null,
+      "expected_gpu_hours_high": null,
+      "recorded_gpu_hours": 0.02407217612194169,
+      "verdict": "undecided"
+    },
+    {
+      "id": "gold-ceiling-seed4",
+      "plain_explanation": "",
+      "expected_gpu_hours_low": null,
+      "expected_gpu_hours_high": null,
+      "recorded_gpu_hours": 0.024077543864728393,
+      "verdict": "undecided"
+    },
+    {
+      "id": "random-label-seed0",
+      "plain_explanation": "",
+      "expected_gpu_hours_low": null,
+      "expected_gpu_hours_high": null,
+      "recorded_gpu_hours": 0.023918926721671598,
+      "verdict": "undecided"
+    },
+    {
+      "id": "random-label-seed1",
+      "plain_explanation": "",
+      "expected_gpu_hours_low": null,
+      "expected_gpu_hours_high": null,
+      "recorded_gpu_hours": 0.0240100618783294,
+      "verdict": "undecided"
+    },
+    {
+      "id": "random-label-seed2",
+      "plain_explanation": "",
+      "expected_gpu_hours_low": null,
+      "expected_gpu_hours_high": null,
+      "recorded_gpu_hours": 0.024084264404720872,
+      "verdict": "undecided"
+    },
+    {
+      "id": "random-label-seed3",
+      "plain_explanation": "",
+      "expected_gpu_hours_low": null,
+      "expected_gpu_hours_high": null,
+      "recorded_gpu_hours": 0.02408693756888776,
+      "verdict": "undecided"
+    },
+    {
+      "id": "random-label-seed4",
+      "plain_explanation": "",
+      "expected_gpu_hours_low": null,
+      "expected_gpu_hours_high": null,
+      "recorded_gpu_hours": 0.024100722426107193,
+      "verdict": "undecided"
+    },
+    {
+      "id": "real-weak-seed0",
+      "plain_explanation": "",
+      "expected_gpu_hours_low": null,
+      "expected_gpu_hours_high": null,
+      "recorded_gpu_hours": 0.023789187940274133,
+      "verdict": "undecided"
+    },
+    {
+      "id": "real-weak-seed1",
+      "plain_explanation": "",
+      "expected_gpu_hours_low": null,
+      "expected_gpu_hours_high": null,
+      "recorded_gpu_hours": 0.02398233072749766,
+      "verdict": "undecided"
+    },
+    {
+      "id": "real-weak-seed2",
+      "plain_explanation": "",
+      "expected_gpu_hours_low": null,
+      "expected_gpu_hours_high": null,
+      "recorded_gpu_hours": 0.024054333365000072,
+      "verdict": "undecided"
+    },
+    {
+      "id": "real-weak-seed3",
+      "plain_explanation": "",
+      "expected_gpu_hours_low": null,
+      "expected_gpu_hours_high": null,
+      "recorded_gpu_hours": 0.024055658713332376,
+      "verdict": "undecided"
+    },
+    {
+      "id": "real-weak-seed4",
+      "plain_explanation": "",
+      "expected_gpu_hours_low": null,
+      "expected_gpu_hours_high": null,
+      "recorded_gpu_hours": 0.02409497065556126,
+      "verdict": "undecided"
+    },
+    {
+      "id": "shuffled-weak-seed0",
+      "plain_explanation": "",
+      "expected_gpu_hours_low": null,
+      "expected_gpu_hours_high": null,
+      "recorded_gpu_hours": 0.023897515095830185,
+      "verdict": "undecided"
+    },
+    {
+      "id": "shuffled-weak-seed1",
+      "plain_explanation": "",
+      "expected_gpu_hours_low": null,
+      "expected_gpu_hours_high": null,
+      "recorded_gpu_hours": 0.02398339477277154,
+      "verdict": "undecided"
+    },
+    {
+      "id": "shuffled-weak-seed2",
+      "plain_explanation": "",
+      "expected_gpu_hours_low": null,
+      "expected_gpu_hours_high": null,
+      "recorded_gpu_hours": 0.024082268899995447,
+      "verdict": "undecided"
+    },
+    {
+      "id": "shuffled-weak-seed3",
+      "plain_explanation": "",
+      "expected_gpu_hours_low": null,
+      "expected_gpu_hours_high": null,
+      "recorded_gpu_hours": 0.024098195260004205,
+      "verdict": "undecided"
+    },
+    {
+      "id": "shuffled-weak-seed4",
+      "plain_explanation": "",
+      "expected_gpu_hours_low": null,
+      "expected_gpu_hours_high": null,
+      "recorded_gpu_hours": 0.024077481580275666,
+      "verdict": "undecided"
+    }
+  ],
+  "fabrication_free": null,
+  "all_experiments_match": null,
+  "meets_gate": {
+    "reference_accuracy": null,
+    "gpu_time_match": null
+  },
+  "headline": null,
+  "k": 2,
+  "prompt_version": "7d95351caa17",
+  "model": "claude-sonnet-5",
+  "billing": "subscription (claudius -p)",
+  "generated_at": "2026-07-09T12:08:43+00:00"
+}

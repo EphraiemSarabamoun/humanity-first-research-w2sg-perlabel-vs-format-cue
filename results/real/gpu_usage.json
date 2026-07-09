@@ -1,0 +1,247 @@
+{
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "mode": "full",
+  "model_notes": [],
+  "per_experiment": [
+    {
+      "gpu_hours": 0.015417289984171577,
+      "last_loss": 0.07554708421230316,
+      "name": "weak-labeler",
+      "parse_failures": 0,
+      "train_steps": 93,
+      "val_accuracy": 0.9151376146788991
+    },
+    {
+      "gpu_hours": 0.0025985409877790112,
+      "name": "base-fewshot",
+      "val_accuracy": 0.5091743119266054
+    },
+    {
+      "gpu_hours": 0.023672213517501303,
+      "last_loss": 0.010464009828865528,
+      "name": "gold-ceiling-seed0",
+      "parse_failures": 0,
+      "train_label_gold_accuracy": 1.0,
+      "train_steps": 125,
+      "val_accuracy": 0.9598623853211009
+    },
+    {
+      "gpu_hours": 0.023789187940274133,
+      "last_loss": 0.0203730259090662,
+      "name": "real-weak-seed0",
+      "parse_failures": 0,
+      "train_label_gold_accuracy": 0.9235,
+      "train_steps": 125,
+      "val_accuracy": 0.9598623853211009
+    },
+    {
+      "gpu_hours": 0.023897515095830185,
+      "last_loss": 0.3170284032821655,
+      "name": "shuffled-weak-seed0",
+      "parse_failures": 0,
+      "train_label_gold_accuracy": 0.5015,
+      "train_steps": 125,
+      "val_accuracy": 0.5091743119266054
+    },
+    {
+      "gpu_hours": 0.023918926721671598,
+      "last_loss": 0.3422366678714752,
+      "name": "random-label-seed0",
+      "parse_failures": 0,
+      "train_label_gold_accuracy": 0.496,
+      "train_steps": 125,
+      "val_accuracy": 0.7098623853211009
+    },
+    {
+      "gpu_hours": 0.024002272657218986,
+      "last_loss": 5.677315130014904e-06,
+      "name": "constant-majority-seed0",
+      "parse_failures": 0,
+      "train_label_gold_accuracy": 0.563,
+      "train_steps": 125,
+      "val_accuracy": 0.5091743119266054
+    },
+    {
+      "gpu_hours": 0.023951932296388097,
+      "last_loss": 0.4812144637107849,
+      "name": "gold-ceiling-seed1",
+      "parse_failures": 0,
+      "train_label_gold_accuracy": 1.0,
+      "train_steps": 125,
+      "val_accuracy": 0.963302752293578
+    },
+    {
+      "gpu_hours": 0.02398233072749766,
+      "last_loss": 0.5209950804710388,
+      "name": "real-weak-seed1",
+      "parse_failures": 0,
+      "train_label_gold_accuracy": 0.9235,
+      "train_steps": 125,
+      "val_accuracy": 0.9564220183486238
+    },
+    {
+      "gpu_hours": 0.02398339477277154,
+      "last_loss": 0.3528643548488617,
+      "name": "shuffled-weak-seed1",
+      "parse_failures": 0,
+      "train_label_gold_accuracy": 0.4955,
+      "train_steps": 125,
+      "val_accuracy": 0.5653669724770642
+    },
+    {
+      "gpu_hours": 0.0240100618783294,
+      "last_loss": 0.35962408781051636,
+      "name": "random-label-seed1",
+      "parse_failures": 0,
+      "train_label_gold_accuracy": 0.4925,
+      "train_steps": 125,
+      "val_accuracy": 0.4988532110091743
+    },
+    {
+      "gpu_hours": 0.024029532559159433,
+      "last_loss": 3.5166635825589765e-06,
+      "name": "constant-majority-seed1",
+      "parse_failures": 0,
+      "train_label_gold_accuracy": 0.563,
+      "train_steps": 125,
+      "val_accuracy": 0.5091743119266054
+    },
+    {
+      "gpu_hours": 0.02405828059971908,
+      "last_loss": 0.011217615567147732,
+      "name": "gold-ceiling-seed2",
+      "parse_failures": 0,
+      "train_label_gold_accuracy": 1.0,
+      "train_steps": 125,
+      "val_accuracy": 0.9644495412844036
+    },
+    {
+      "gpu_hours": 0.024054333365000072,
+      "last_loss": 0.02904297225177288,
+      "name": "real-weak-seed2",
+      "parse_failures": 0,
+      "train_label_gold_accuracy": 0.9235,
+      "train_steps": 125,
+      "val_accuracy": 0.9518348623853211
+    },
+    {
+      "gpu_hours": 0.024082268899995447,
+      "last_loss": 0.34217482805252075,
+      "name": "shuffled-weak-seed2",
+      "parse_failures": 0,
+      "train_label_gold_accuracy": 0.4955,
+      "train_steps": 125,
+      "val_accuracy": 0.5172018348623854
+    },
+    {
+      "gpu_hours": 0.024084264404720872,
+      "last_loss": 0.33887210488319397,
+      "name": "random-label-seed2",
+      "parse_failures": 0,
+      "train_label_gold_accuracy": 0.5055,
+      "train_steps": 125,
+      "val_accuracy": 0.5814220183486238
+    },
+    {
+      "gpu_hours": 0.024059835291110276,
+      "last_loss": 2.980224962811917e-06,
+      "name": "constant-majority-seed2",
+      "parse_failures": 0,
+      "train_label_gold_accuracy": 0.563,
+      "train_steps": 125,
+      "val_accuracy": 0.5091743119266054
+    },
+    {
+      "gpu_hours": 0.02407217612194169,
+      "last_loss": 0.23652321100234985,
+      "name": "gold-ceiling-seed3",
+      "parse_failures": 0,
+      "train_label_gold_accuracy": 1.0,
+      "train_steps": 125,
+      "val_accuracy": 0.9621559633027523
+    },
+    {
+      "gpu_hours": 0.024055658713332376,
+      "last_loss": 0.04031826928257942,
+      "name": "real-weak-seed3",
+      "parse_failures": 0,
+      "train_label_gold_accuracy": 0.9235,
+      "train_steps": 125,
+      "val_accuracy": 0.9564220183486238
+    },
+    {
+      "gpu_hours": 0.024098195260004205,
+      "last_loss": 0.3419609069824219,
+      "name": "shuffled-weak-seed3",
+      "parse_failures": 0,
+      "train_label_gold_accuracy": 0.5025,
+      "train_steps": 125,
+      "val_accuracy": 0.536697247706422
+    },
+    {
+      "gpu_hours": 0.02408693756888776,
+      "last_loss": 0.30766910314559937,
+      "name": "random-label-seed3",
+      "parse_failures": 0,
+      "train_label_gold_accuracy": 0.503,
+      "train_steps": 125,
+      "val_accuracy": 0.5091743119266054
+    },
+    {
+      "gpu_hours": 0.024108856740276678,
+      "last_loss": 2.8461151941883145e-06,
+      "name": "constant-majority-seed3",
+      "parse_failures": 0,
+      "train_label_gold_accuracy": 0.563,
+      "train_steps": 125,
+      "val_accuracy": 0.5091743119266054
+    },
+    {
+      "gpu_hours": 0.024077543864728393,
+      "last_loss": 0.0029204292222857475,
+      "name": "gold-ceiling-seed4",
+      "parse_failures": 0,
+      "train_label_gold_accuracy": 1.0,
+      "train_steps": 125,
+      "val_accuracy": 0.9621559633027523
+    },
+    {
+      "gpu_hours": 0.02409497065556126,
+      "last_loss": 0.006159586366266012,
+      "name": "real-weak-seed4",
+      "parse_failures": 0,
+      "train_label_gold_accuracy": 0.9235,
+      "train_steps": 125,
+      "val_accuracy": 0.944954128440367
+    },
+    {
+      "gpu_hours": 0.024077481580275666,
+      "last_loss": 0.3608624339103699,
+      "name": "shuffled-weak-seed4",
+      "parse_failures": 0,
+      "train_label_gold_accuracy": 0.5005,
+      "train_steps": 125,
+      "val_accuracy": 0.5091743119266054
+    },
+    {
+      "gpu_hours": 0.024100722426107193,
+      "last_loss": 0.35556459426879883,
+      "name": "random-label-seed4",
+      "parse_failures": 0,
+      "train_label_gold_accuracy": 0.4925,
+      "train_steps": 125,
+      "val_accuracy": 0.4908256880733945
+    },
+    {
+      "gpu_hours": 0.02410427608833642,
+      "last_loss": 2.4586865947640035e-06,
+      "name": "constant-majority-seed4",
+      "parse_failures": 0,
+      "train_label_gold_accuracy": 0.563,
+      "train_steps": 125,
+      "val_accuracy": 0.5091743119266054
+    }
+  ],
+  "recorded_gpu_hours": 0.6184690007185902,
+  "run_id": "hypgen-20260708-213130-1"
+}

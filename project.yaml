@@ -1,0 +1,12 @@
+name: w2sg-perlabel-vs-format-cue
+run_id: hypgen-20260708-213130-1
+title: "Per-item Weak-Label Signal vs Task-Format Cueing in Weak-to-Strong Generalization"
+question: "In weak-to-strong generalization, does the strong student need per-item weak-label signal, or is task-format cueing enough?"
+stage: proposed
+references_bib: references.bib
+tags:
+  - scalable-oversight
+  - weak-to-strong
+  - finetuning
+links:
+  compute: "single RTX 5090 GPU (32 GB), the GPU host"

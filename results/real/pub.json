@@ -1,0 +1,154 @@
+{
+  "plain": "Weak-to-strong generalization trains a capable model using labels from a weaker, less reliable teacher model, hoping the capable one ends up better than its teacher. We asked a sharp question: does the capable model actually need the teacher's specific answer on each example, or is it enough to just be shown the task's format (what a valid answer looks like)? We trained a 7B model on a sentiment task and, in matched conditions, kept the task format intact but scrambled, randomized, or flattened the per-example labels. The answer is a clean no for 'format is enough': with real per-example labels the model hits 95.4% accuracy (near the 96.2% gold ceiling), but every format-preserving condition that destroys per-example signal collapses to the base floor (51-56%). A pre-registered check confirms the signal really was destroyed. So per-example signal does the real work, and this comes out opposite to a well-known in-context-learning result. Approve = publish this negative result to the Humanity First site; Reject = discard it.",
+  "cost": {
+    "api_equivalent_usd": 9.0446,
+    "sessions": 7
+  },
+  "paper_title": "Format Is Not Enough: A Clean Negative Result for Task-Format Cueing in Weak-to-Strong Finetuning",
+  "headline_claim": "In weak-to-strong finetuning on SST-2 (Qwen2.5-0.5B->7B, 5 seeds), the strong student REQUIRES per-item weak-label signal: real weak labels reach 0.954 accuracy (vs 0.962 gold ceiling) while every format-preserving arm that destroys per-item correspondence (shuffled 0.528, random 0.558, constant-majority 0.509) sits at the base floor (paired gaps 0.40-0.45, p<1e-4). Task-format cueing alone is not enough, inverting Min et al. (2022) for the finetuning regime.",
+  "weakest_part": "Scope is narrow: one easy binary task (SST-2) and one model family (Qwen2.5). The supervisor is unusually strong (0.915), so the weak-to-ceiling band is tiny and PGR is numerically degenerate; the paper honestly leads with raw accuracy, but a skeptic could read the finding as close to \"deleting the labels on an easy task deletes learning\" rather than a deep W2SG claim. The single strongest missing experiment is repeating the label-channel ablation on a harder task with a genuinely weak supervisor (wide band), where format-vs-signal has room to dissociate (queued as followup #1). Also: the three JUDGED honesty gates (implementation_fidelity, figures, draft_consistency) could not run this session due to a sonnet-5 weekly-limit outage and were fail-open; an independent gpt-5.5 (Codex) reviewer was substituted for the sonnet-5 panel and did check internal numerical consistency (found none), but a same-model AI-Scientist panel did not run.",
+  "gate_report": {
+    "project_dir": "/home/ephra/projects/Claudius_Maximus/projects/w2sg-perlabel-vs-format-cue",
+    "generated_at": "2026-07-09T12:04:32+00:00",
+    "checks": [
+      {
+        "name": "device_scrub",
+        "status": "pass",
+        "detail": "no fleet device names in paper.md/paper.tex"
+      },
+      {
+        "name": "artifacts",
+        "status": "pass",
+        "detail": "all 4 required artifacts present"
+      },
+      {
+        "name": "experiment_gpu_plumbing",
+        "status": "warn",
+        "detail": "gpu_usage.json absent or carries no entries \u2014 no GPU time to join"
+      },
+      {
+        "name": "references",
+        "status": "pass",
+        "detail": "11 distinct cited references, all present in references.bib"
+      },
+      {
+        "name": "recompute",
+        "status": "pass",
+        "detail": "all 34 summary metric(s) reproduced from raw artifacts in a summary-free sandbox"
+      },
+      {
+        "name": "stats",
+        "status": "pass",
+        "detail": "4 stats entr(y/ies) schema-valid; 1 checked against the draft, all p + CI numbers present; 3 in_appendix"
+      },
+      {
+        "name": "design",
+        "status": "pass",
+        "detail": "manipulation check evaluated PASS (train_label_gold_accuracy decrease: 0.9235 -> 0.4991); both values present in the draft"
+      },
+      {
+        "name": "implementation_fidelity",
+        "status": "warn",
+        "detail": "judge unavailable (fail-open) \u2014 fidelity unverified this run"
+      },
+      {
+        "name": "figures",
+        "status": "warn",
+        "detail": "figure judge unavailable (fail-open) \u2014 figures unverified"
+      },
+      {
+        "name": "draft_consistency",
+        "status": "warn",
+        "detail": "judge unavailable (fail-open) \u2014 draft self-consistency unverified this run"
+      }
+    ],
+    "overall": "pass",
+    "not_checked": [
+      "reference accuracy + characterization (now tools/score/tier1_score.py)",
+      "GPU-time plausibility / fabricated-scale detection (tier1_score.py)",
+      "headline-number consistency between the summary and the paper, and recompute",
+      "statistical test CHOICE + assumptions + multiple-comparison correction (presence + draft-consistency of a stats.json entry per comparison is now gated by check_stats; whether the chosen test is the RIGHT one is not)",
+      "claim/evidence fit \u2014 whether the prose claims more than the numbers support",
+      "novelty against the literature",
+      "figure density, reference count, LaTeX build, and house style"
+    ]
+  },
+  "reviewer_panel": {
+    "engine": "codex-gpt5.5-substitute",
+    "judge": "gpt-5.5",
+    "substitute_reason": "sonnet-5 reviewer weekly-limited (Anthropic outage 2026-07-09); independent-vendor substitute per never-block-on-one-vendor",
+    "overall_score": 6.3,
+    "min_reviewer_score": 5.5,
+    "decision": "weak-accept",
+    "candidate_scores": [
+      {
+        "path": "paper_cand1.md",
+        "overall": 5.8,
+        "one_line": "Borderline/weak-accept: polished mechanism-first draft with correct frozen numbers and all 12 citations, but it slightly overclaims mechanistic unambiguity for a single SST-2/model-pair ablation."
+      },
+      {
+        "path": "paper_cand2.md",
+        "overall": 6.3,
+        "one_line": "Weak-accept: strongest framing because it states the failed hypothesis honestly, keeps the frozen statistics consistent, cites all 12 references, and makes the negative result readable without hiding scope limits."
+      },
+      {
+        "path": "paper_cand3.md",
+        "overall": 6.1,
+        "one_line": "Weak-accept: rigorous methods-first framing with correct numbers and all 12 citations, but it undersells the main scientific finding relative to the cleaner negative-result version."
+      }
+    ],
+    "winner": "paper_cand2.md",
+    "senior_review": {
+      "summary": "The winning draft reports a clean negative result: preserving task format while destroying per-item weak-label signal collapses Qwen2.5-7B SST-2 weak-to-strong finetuning back near the base floor, while real weak labels nearly match the gold ceiling. The design is unusually well controlled for a small run, with matched inputs, a passing manipulation check, paired seed inference, and honest treatment of PGR degeneracy, but the paper must keep its scope narrow.",
+      "strengths": [
+        "The central contrast is clean and decision-relevant: real-weak reaches 0.9539 while shuffled/random/constant format-only controls remain far below it, with paired CIs excluding zero by a wide margin.",
+        "The manipulation check is pre-registered and passed, so the negative result is not vulnerable to the obvious failed-intervention objection.",
+        "The draft is candid about the failed hypothesis, the narrow PGR denominator, and the limited external validity, which makes the result more credible."
+      ],
+      "priority_weaknesses": [
+        {
+          "weakness": "External validity is very limited: one binary sentiment task and one Qwen2.5 weak/strong pair.",
+          "severity": "med",
+          "addressable": "needs-experiment",
+          "suggestion": "Do not broaden the claim beyond this setting unless a follow-up repeats the matched-input ablation on another dataset or model family; in text, phrase the contribution as a scoped counterexample to format-sufficiency in W2SG finetuning."
+        },
+        {
+          "weakness": "The draft sometimes says the format-only arms yield 'nothing above chance' even though random-label averages 0.5580 and no direct chance-vs-random CI is reported.",
+          "severity": "med",
+          "addressable": "revise-text",
+          "suggestion": "Replace categorical chance language with 'near the base/chance floor and far below real-weak' unless adding a direct test against the 0.5 chance baseline."
+        },
+        {
+          "weakness": "The weak labeler is near ceiling, making both the scientific regime and the PGR denominator unusual.",
+          "severity": "med",
+          "addressable": "add-response",
+          "suggestion": "Add a short response paragraph explaining why a strong weak labeler is still informative for the label-channel decomposition while emphasizing that noisier weak supervisors remain an open follow-up."
+        },
+        {
+          "weakness": "Reproducibility details are thin for a methods-sensitive result.",
+          "severity": "low",
+          "addressable": "revise-text",
+          "suggestion": "Add the LoRA hyperparameters, training steps, evaluation split size, prompt/label template, and exact seed policy from the experiment artifacts or appendix."
+        },
+        {
+          "weakness": "Bootstrap p-values are printed as p = 0.0, which is numerically awkward in paper prose.",
+          "severity": "low",
+          "addressable": "revise-text",
+          "suggestion": "Report these as 'no bootstrap resample crossed zero' or 'p < 1e-4 under 10000 resamples' while preserving the exact stats.json value in artifacts."
+        }
+      ]
+    },
+    "score_trajectory": [
+      6.3
+    ]
+  },
+  "review_score": {
+    "overall": 6.3,
+    "min_reviewer": 5.5,
+    "decision": "weak-accept",
+    "cycles": 1,
+    "engine": "codex-gpt5.5-substitute",
+    "substitute_reason": "sonnet-5 reviewer weekly-limited (Anthropic outage 2026-07-09); independent-vendor substitute per never-block-on-one-vendor"
+  },
+  "not_checked": "Judged honesty gates fail-open (sonnet-5 weekly-limit outage): implementation_fidelity, figures, draft_consistency UNVERIFIED by a Claude judge this run (Codex reviewer mitigated consistency). experiment_gpu_plumbing WARN: gpu_usage.json did not join to experiments.json for the gate, though the appendix reports 0.6185 GPU-hours directly. Cost tool priced only the Anthropic sessions ($9.04); the gpt-5.5/Codex sessions are unpriced."
+}

@@ -1,0 +1,49 @@
+[
+  {
+    "ci_hi": 0.44151376146788995,
+    "ci_lo": 0.4082568807339449,
+    "claim": "real-weak vs shuffled-weak, student_val_accuracy",
+    "n": 5,
+    "n_seeds": 5,
+    "notes": "Statistic is mean(real-weak - shuffled-weak) across shared seeds [0, 1, 2, 3, 4]; p is two-sided as 2*min(Pr(bootstrap mean <= 0), Pr(bootstrap mean >= 0)).",
+    "p": 0.0,
+    "statistic": 0.4263761467889908,
+    "test": "paired bootstrap (10000 resamples, seed=12345) of the per-seed accuracy difference",
+    "in_appendix": true
+  },
+  {
+    "ci_hi": 0.4541284403669724,
+    "ci_lo": 0.314908256880734,
+    "claim": "real-weak vs random-label, student_val_accuracy",
+    "n": 5,
+    "n_seeds": 5,
+    "notes": "Statistic is mean(real-weak - random-label) across shared seeds [0, 1, 2, 3, 4]; p is two-sided as 2*min(Pr(bootstrap mean <= 0), Pr(bootstrap mean >= 0)).",
+    "p": 0.0,
+    "statistic": 0.3958715596330275,
+    "test": "paired bootstrap (10000 resamples, seed=12345) of the per-seed accuracy difference",
+    "in_appendix": true
+  },
+  {
+    "ci_hi": 0.4486238532110092,
+    "ci_lo": 0.44013761467889917,
+    "claim": "real-weak vs constant-majority, student_val_accuracy",
+    "n": 5,
+    "n_seeds": 5,
+    "notes": "Statistic is mean(real-weak - constant-majority) across shared seeds [0, 1, 2, 3, 4]; p is two-sided as 2*min(Pr(bootstrap mean <= 0), Pr(bootstrap mean >= 0)).",
+    "p": 0.0,
+    "statistic": 0.44472477064220184,
+    "test": "paired bootstrap (10000 resamples, seed=12345) of the per-seed accuracy difference",
+    "in_appendix": true
+  },
+  {
+    "ci_hi": -0.003669724770642202,
+    "ci_lo": -0.013532110091743089,
+    "claim": "real-weak vs gold-ceiling, student_val_accuracy",
+    "n": 5,
+    "n_seeds": 5,
+    "notes": "Statistic is mean(real-weak - gold-ceiling) across shared seeds [0, 1, 2, 3, 4]; p is two-sided as 2*min(Pr(bootstrap mean <= 0), Pr(bootstrap mean >= 0)).",
+    "p": 0.0016,
+    "statistic": -0.008486238532110103,
+    "test": "paired bootstrap (10000 resamples, seed=12345) of the per-seed accuracy difference"
+  }
+]

@@ -1,0 +1,71 @@
+{
+  "generated_at": "2026-07-09T05:00:07+00:00",
+  "judge": "claude-sonnet-5",
+  "effort": "high",
+  "k": 2,
+  "vram_gb": 32,
+  "status": "judge_unavailable",
+  "predicted_review_floor": 5.0,
+  "candidates": [
+    {
+      "path": "drafts/designs/design_candidate_1.json",
+      "scores": {
+        "falsification_power": null,
+        "feasibility": null,
+        "budget_fit": null,
+        "mean": null,
+        "predicted_review_score": null,
+        "n_ok": 0
+      },
+      "defects": [],
+      "judged_demands": [],
+      "must_fix_before_gpu": [],
+      "judge_errors": [
+        "exit 1: You've hit your weekly limit · resets 6pm (America/Los_Angeles)\n",
+        "exit 1: You've hit your weekly limit · resets 6pm (America/Los_Angeles)\n"
+      ],
+      "verdict": "winner"
+    },
+    {
+      "path": "drafts/designs/design_candidate_2.json",
+      "scores": {
+        "falsification_power": null,
+        "feasibility": null,
+        "budget_fit": null,
+        "mean": null,
+        "predicted_review_score": null,
+        "n_ok": 0
+      },
+      "defects": [],
+      "judged_demands": [],
+      "must_fix_before_gpu": [],
+      "judge_errors": [
+        "exit 1: You've hit your weekly limit · resets 6pm (America/Los_Angeles)\n",
+        "exit 1: You've hit your weekly limit · resets 6pm (America/Los_Angeles)\n"
+      ],
+      "verdict": "eligible"
+    },
+    {
+      "path": "drafts/designs/design_candidate_3.json",
+      "scores": {
+        "falsification_power": null,
+        "feasibility": null,
+        "budget_fit": null,
+        "mean": null,
+        "predicted_review_score": null,
+        "n_ok": 0
+      },
+      "defects": [],
+      "judged_demands": [],
+      "must_fix_before_gpu": [],
+      "judge_errors": [
+        "exit 1: You've hit your weekly limit · resets 6pm (America/Los_Angeles)\n",
+        "exit 1: You've hit your weekly limit · resets 6pm (America/Los_Angeles)\n"
+      ],
+      "verdict": "eligible"
+    }
+  ],
+  "winner": "drafts/designs/design_candidate_1.json",
+  "required_fixes": [],
+  "note": "judge unavailable (every judged call failed); selected defect-free candidate drafts/designs/design_candidate_1.json mechanically (first by name, no judged ranking). Proceed on this + re-run the judged pass later to confirm the choice."
+}

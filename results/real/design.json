@@ -1,0 +1,63 @@
+{
+  "candidates_considered": 3,
+  "controls": [
+    {
+      "name": "gold-ceiling",
+      "purpose": "Upper anchor and PGR denominator: strong student finetuned on gold labels on the same K training examples; supplies ceiling_acc in PGR = (student_acc - weak_acc)/(ceiling_acc - weak_acc).",
+      "status": "planned"
+    },
+    {
+      "name": "base-fewshot",
+      "purpose": "Lower floor: un-finetuned Qwen2.5-7B evaluated few-shot on the held-out gold test split; isolates any gain attributable to finetuning at all from the model's prior task competence.",
+      "status": "planned"
+    },
+    {
+      "name": "shuffled-weak-label",
+      "purpose": "THE key control separating per-item signal from format cueing: identical weak-label MARGINAL distribution but per-item input->label correspondence destroyed by a within-training-set label permutation; format, label space, and class balance are held while per-item signal is removed. Shuffle is re-drawn per seed.",
+      "status": "planned"
+    },
+    {
+      "name": "random-label",
+      "purpose": "Labels drawn i.i.d. uniform from the label space, destroying per-item signal AND the weak-label marginal; contrasted with shuffled-weak it isolates whether the weak label's class balance (not just format) carries residual signal.",
+      "status": "planned"
+    },
+    {
+      "name": "constant-majority-label",
+      "purpose": "Every training example labeled with the single majority class (zero label variance): a pure degenerate format cue that emits the task's output tokens with no discriminative information; tests whether merely producing the task format suffices.",
+      "status": "planned"
+    },
+    {
+      "name": "size-and-input-matched-training-set",
+      "purpose": "Every condition finetunes on the identical set of K examples with the identical inputs; only the label channel differs across conditions, so PGR differences are attributable solely to the label manipulation and not to training-set size or input distribution.",
+      "status": "planned"
+    }
+  ],
+  "design_review": "results/real/design_review.json",
+  "hypothesis": "In weak-to-strong finetuning on SST-2, a Qwen2.5-7B student trained in the task format but with per-item weak-label correspondence destroyed (label-shuffle) attains PGR not meaningfully lower than the same student trained on real per-item weak labels (real-weak PGR minus shuffled-weak PGR < 0.20), implying the strong student does not require per-item weak-label signal and task-format cueing is sufficient.",
+  "manipulation_check": {
+    "direction": "decrease",
+    "evaluated": {
+      "evaluated_at": "2026-07-09T11:40:18+00:00",
+      "notes": "Mean train_label_gold_accuracy from raw_results.jsonl: real-weak before 0.923500, shuffled-weak after 0.499100; per-item weak-label signal destroyed.",
+      "value_after": 0.4991,
+      "value_before": 0.9235,
+      "verdict": "pass"
+    },
+    "measured_after": "build_labels",
+    "metric": "train_label_gold_accuracy",
+    "min_effect": 0.1
+  },
+  "pivot": {
+    "acknowledged": false
+  },
+  "scale": {
+    "expected_gpu_hours": 4.5,
+    "model": "Qwen2.5-7B (LoRA) student; Qwen2.5-0.5B-Instruct weak labeler; SST-2",
+    "n_examples": 2000
+  },
+  "schema_version": 1,
+  "seeds": {
+    "n_planned": 5,
+    "policy": "Five seeds (0-4) control both LoRA init/data-order and the per-seed re-draw of the shuffle/random label permutations; PGR reported as mean +/- bootstrap CI across seeds, and the real-weak vs shuffled-weak contrast tested with a paired test across seeds."
+  }
+}
